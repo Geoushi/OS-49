@@ -42,36 +42,39 @@
             // 
             richTextBox1.Location = new Point(12, 128);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(776, 288);
+            richTextBox1.Size = new Size(776, 295);
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = "";
             // 
             // btnWrite
             // 
-            btnWrite.Location = new Point(135, 47);
+            btnWrite.Location = new Point(125, 26);
             btnWrite.Name = "btnWrite";
-            btnWrite.Size = new Size(94, 29);
+            btnWrite.Size = new Size(110, 41);
             btnWrite.TabIndex = 1;
             btnWrite.Text = "Write File";
             btnWrite.UseVisualStyleBackColor = true;
+            btnWrite.Click += btnWrite_Click;
             // 
             // btnRead
             // 
-            btnRead.Location = new Point(349, 47);
+            btnRead.Location = new Point(337, 26);
             btnRead.Name = "btnRead";
-            btnRead.Size = new Size(94, 29);
+            btnRead.Size = new Size(94, 41);
             btnRead.TabIndex = 2;
             btnRead.Text = "Read File";
             btnRead.UseVisualStyleBackColor = true;
+            btnRead.Click += btnRead_Click;
             // 
             // btnAppend
             // 
-            btnAppend.Location = new Point(561, 47);
+            btnAppend.Location = new Point(565, 26);
             btnAppend.Name = "btnAppend";
-            btnAppend.Size = new Size(94, 29);
+            btnAppend.Size = new Size(94, 41);
             btnAppend.TabIndex = 3;
             btnAppend.Text = "Append Text";
             btnAppend.UseVisualStyleBackColor = true;
+            btnAppend.Click += btnAppend_Click;
             // 
             // txtPath
             // 
@@ -94,7 +97,6 @@
             label1.Size = new Size(79, 20);
             label1.TabIndex = 6;
             label1.Text = "File Name:";
-
             // 
             // Form2
             // 
@@ -108,7 +110,7 @@
             Controls.Add(btnWrite);
             Controls.Add(richTextBox1);
             Name = "Form2";
-            Text = "Form2";
+            Text = "File Manager";
             ResumeLayout(false);
             PerformLayout();
         }

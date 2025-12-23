@@ -34,9 +34,9 @@
             // 
             // file_man
             // 
-            file_man.Location = new Point(298, 170);
+            file_man.Location = new Point(258, 128);
             file_man.Name = "file_man";
-            file_man.Size = new Size(179, 49);
+            file_man.Size = new Size(250, 105);
             file_man.TabIndex = 0;
             file_man.Text = "File Manager";
             file_man.UseVisualStyleBackColor = true;
@@ -44,9 +44,9 @@
             // 
             // sys_info
             // 
-            sys_info.Location = new Point(298, 281);
+            sys_info.Location = new Point(258, 304);
             sys_info.Name = "sys_info";
-            sys_info.Size = new Size(179, 50);
+            sys_info.Size = new Size(250, 105);
             sys_info.TabIndex = 1;
             sys_info.Text = "System Info";
             sys_info.UseVisualStyleBackColor = true;

@@ -106,5 +106,10 @@ namespace OS_49
                 listBox1.Items.Add(obj["Name"] + " Free: " + free.ToString("0.0") + " GB");
             }
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
