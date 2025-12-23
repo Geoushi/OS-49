@@ -40,6 +40,7 @@
             file_man.TabIndex = 0;
             file_man.Text = "File Manager";
             file_man.UseVisualStyleBackColor = true;
+            file_man.Click += file_man_Click;
             // 
             // sys_info
             // 
@@ -49,6 +50,7 @@
             sys_info.TabIndex = 1;
             sys_info.Text = "System Info";
             sys_info.UseVisualStyleBackColor = true;
+            sys_info.Click += sys_info_Click;
             // 
             // Form1
             // 

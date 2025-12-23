@@ -28,19 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
+            richTextBox1 = new RichTextBox();
+            btnWrite = new Button();
+            btnRead = new Button();
+            btnAppend = new Button();
             SuspendLayout();
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(12, 128);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(776, 288);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = "";
+            // 
+            // btnWrite
+            // 
+            btnWrite.Location = new Point(135, 47);
+            btnWrite.Name = "btnWrite";
+            btnWrite.Size = new Size(94, 29);
+            btnWrite.TabIndex = 1;
+            btnWrite.Text = "Write File";
+            btnWrite.UseVisualStyleBackColor = true;
+            // 
+            // btnRead
+            // 
+            btnRead.Location = new Point(349, 47);
+            btnRead.Name = "btnRead";
+            btnRead.Size = new Size(94, 29);
+            btnRead.TabIndex = 2;
+            btnRead.Text = "Read File";
+            btnRead.UseVisualStyleBackColor = true;
+            // 
+            // btnAppend
+            // 
+            btnAppend.Location = new Point(561, 47);
+            btnAppend.Name = "btnAppend";
+            btnAppend.Size = new Size(94, 29);
+            btnAppend.TabIndex = 3;
+            btnAppend.Text = "Append Text";
+            btnAppend.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnAppend);
+            Controls.Add(btnRead);
+            Controls.Add(btnWrite);
+            Controls.Add(richTextBox1);
             Name = "Form2";
             Text = "Form2";
-            Load += Form2_Load;
             ResumeLayout(false);
         }
 
         #endregion
+
+        private RichTextBox richTextBox1;
+        private Button btnWrite;
+        private Button btnRead;
+        private Button btnAppend;
     }
 }
