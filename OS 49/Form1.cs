@@ -28,5 +28,10 @@
             Form3 f3 = new Form3(); // بنعمل نسخة من فورم السيستم
             f3.ShowDialog();        // بنفتحها
         }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,44 +11,49 @@ namespace OS_49
 {
     public partial class Form2 : Form
     {
-        // اسم الملف اللي هنشتغل عليه
-        string path = "exam_test.txt";
-
         public Form2()
         {
             InitializeComponent();
         }
 
-        // 1. Write Text File
+        // زرار الكتابة (Write)
         private void btnWrite_Click(object sender, EventArgs e)
         {
-            File.WriteAllText(path, richTextBox1.Text);
-            MessageBox.Show("File Created and Written Successfully!");
+            if (string.IsNullOrEmpty(txtPath.Text))
+            {
+                MessageBox.Show("Please enter a file name!");
+                return;
+            }
+            File.WriteAllText(txtPath.Text, richTextBox1.Text);
+            MessageBox.Show("File created successfully");
         }
 
-        // 2. Read Text File
+        // زرار القراءة (Read)
         private void btnRead_Click(object sender, EventArgs e)
         {
-            if (File.Exists(path))
+            if (File.Exists(txtPath.Text))
             {
-                string content = File.ReadAllText(path);
-                richTextBox1.Text = content;
-                MessageBox.Show("File Read Successfully!");
+                richTextBox1.Text = File.ReadAllText(txtPath.Text);
+                MessageBox.Show("Opened file: " + txtPath.Text);
             }
             else
             {
-                MessageBox.Show("File not found! Write it first.");
+                MessageBox.Show("File not found!");
             }
         }
 
-        // 3. Append Text
+        // زرار الإضافة (Append)
         private void btnAppend_Click(object sender, EventArgs e)
         {
-            using (StreamWriter sw = File.AppendText(path))
+            if (File.Exists(txtPath.Text))
             {
-                sw.WriteLine(richTextBox1.Text);
+                File.AppendAllText(txtPath.Text, "\n" + richTextBox1.Text);
+                MessageBox.Show("Text appended successfully");
             }
-            MessageBox.Show("Text Appended Successfully!");
+            else
+            {
+                MessageBox.Show("File does not exist!");
+            }
         }
     }
 }
